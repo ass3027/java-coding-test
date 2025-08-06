@@ -1,12 +1,13 @@
-package test;
+package bruteForce;
 
 
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+@SuppressWarnings("SpellCheckingInspection")
 public class Soopoja {
-    public static void main (String args[]){
+    public static void main (String[] args){
         String[] participant = {"leo", "kiki", "eden"};
         Map<String, Long> participantMap = Arrays.asList(participant).stream()
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
@@ -19,35 +20,30 @@ public class Soopoja {
 
 
 //        Arrays.stream(report).distinct().map(it->it.split(" ")).forEach( it-> map.get(it[0]).add(it[1]));
-
-
-        new Solution1().solution(new int[]{1, 2, 3, 4, 5});
+        new Solution().solution(new int[]{1, 2, 3, 4, 5});
     }
-}
+    static class Solution {
+        public int[] solution(int[] answers) {
+            int[] answer = {};
 
 
-class Solution1 {
-    public int[] solution(int[] answers) {
-        int[] answer = {};
+            int[][] patterns = {{1,2,3,4,5}
+                    ,{2,1,2,3,2,4,2,5}
+                    ,{3,3,1,1,2,2,4,4,5,5}};
+
+            int[] score = {0,0,0};
 
 
-        int[][] patterns = {{1,2,3,4,5}
-                ,{2,1,2,3,2,4,2,5}
-                ,{3,3,1,1,2,2,4,4,5,5}};
-
-        int[] score = {0,0,0};
-
-
-        for(int i=0; i<answers.length; i++){
-            for(int j=0; j < patterns.length ;j++){
-                if(answers[i] == patterns[j][i%patterns[j].length]){
-                    System.out.println(i+"" +j);
-                    score[j]++;
+            for(int i=0; i<answers.length; i++){
+                for(int j=0; j < patterns.length ;j++){
+                    if(answers[i] == patterns[j][i%patterns[j].length]){
+                        System.out.println(i+"" +j);
+                        score[j]++;
+                    }
                 }
+                // if(answers[i] == a[i])
             }
-            // if(answers[i] == a[i])
-        }
-        return score;
+            return score;
 //         int max =0;
 //         List<Integer> list = new ArrayList<>();
 
@@ -67,5 +63,8 @@ class Solution1 {
 //         }
 
 //         return answer;
+        }
     }
 }
+
+

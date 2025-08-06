@@ -1,4 +1,4 @@
-package test;
+package beforeClassification;
 
 import java.io.*;
 import java.util.StringTokenizer;

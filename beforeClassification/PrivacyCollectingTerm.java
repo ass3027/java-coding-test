@@ -1,4 +1,4 @@
-package test;
+package beforeClassification;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -6,10 +6,10 @@ import java.util.List;
 import java.util.ArrayList;
 
 
-class sss {
+class PrivacyCollectingTerm {
     public static void main(String[] args){
-//        new Solution().solution();
         String[] s = "2022.05.10".split("\\.");
+        new Solution().solution("",s, s);
         System.out.println(s.length);
     }
 

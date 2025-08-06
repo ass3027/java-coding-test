@@ -1,9 +1,9 @@
-package test;
+package beforeClassification;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class MinSales {
+public class MinDecreaseSales {
 
     public static void main(String[] args) {
         new Solution().solution(new int[]{5, 6, 5, 3, 4}, new int[][]{{2, 3}, {1, 4}, {2, 5}, {1, 2}});

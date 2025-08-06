@@ -1,12 +1,12 @@
-package test;
+package beforeClassification;
 
 public class OverlapSecMin {
 
     public static void main(String[] args) {
-        new OverlapSecMin2().solution(0,5,30,0,7,0);
+        new Solution().solution(0,5,30,0,7,0);
     }
 
-    static class OverlapSecMin2 {
+    static class Solution {
 
         int startTime;
         int endTime;
