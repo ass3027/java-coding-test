@@ -43,7 +43,7 @@ public class PhoneNumberList {
             Arrays.sort(phone_book);
             HashMap<Integer, HashSet<String>> map = new HashMap<>();
             for(String phoneNum : phone_book)
-                map.computeIfAbsent(getKey(phoneNum), _ -> new HashSet<>())
+                map.computeIfAbsent(getKey(phoneNum), k -> new HashSet<>())
                         .add(phoneNum);
 
             for(String phoneNum : phone_book){
