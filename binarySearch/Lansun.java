@@ -1,4 +1,4 @@
-package beforeClassification;
+package binarySearch;
 
 import java.io.*;
 import java.util.StringTokenizer;
