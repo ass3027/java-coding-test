@@ -22,7 +22,7 @@ public class GameMinDistance {
             return arrived ? min+1 : -1;
         }
         void dfs(int x, int y, int cnt){
-            if(x < 0 || x >= this.w || y < 0 || y >= this.h || this.maps[y][x] == 0)
+            if(x < 0 || x >= this.w || y < 0 || y >= this.h || this.maps[y][x] == 0 || this.visited[y][x])
                 return;
 
             if(x == this.w-1 && y == this.h-1){
